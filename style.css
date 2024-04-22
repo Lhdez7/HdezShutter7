@@ -119,7 +119,7 @@ button:hover {
   
 }
 
-.gallery {
+.gallery-portfolio {
   display: flex;
   flex-wrap: wrap;
   margin: -1rem -1rem;

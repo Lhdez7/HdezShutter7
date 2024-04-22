@@ -30,35 +30,77 @@ nav a:hover {
 
 /*home*/
 
-.home {
-  height: 100vh;
+
+
+
+
+.hero {
+  background: #F9EFE6;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 95vh;
+  padding: 3rem calc((100vw - 1300px) / 2);
+  text-align: center;
+}
+
+.column-center {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #000;
+  padding: 0rem 2rem;
+}
+
+.column-center h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-family: "Oswald";
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding: 3.5rem 0;
+  color: #6E464E;
+  
+}
+
+.column-center p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  background: #6E464E;
+  cursor: pointer;
+  border-radius: 50px;
+  
+}
+
+button:hover {
+  background: #967B65;
+  color: #000;
+}
+
+.column-center {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0 10%;
+  padding: 0rem 2rem;
 }
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 15px;
+.hero-image {
+  width: 100%;
+  height: 75%;
 }
-
-.home-content {
-  max-width: 600px;
-
-}
-
-.home-content h1 {
-
-  font-size: 56px;
-  font-weight: 700;
-  font-family: "oswald";
-}
-
-.home-content p {
-  font-size: 16px;
-}
-
 
 
 /*portfolio*/
@@ -75,6 +117,7 @@ nav a:hover {
   text-align: center;
   padding: 3.5rem 0;
   color: #6E464E;
+  
 }
 
 .gallery {
@@ -101,6 +144,37 @@ nav a:hover {
 
 /*Services*/
 
+h2 {
+  font-family: $arcfont;
+}
+
+.container-services {
+  width: min(100vw - 3rem, 100ch);
+  margin-inline: auto;
+  padding-block: 2rem;
+
+  > * + * {
+    margin-block-start: min(5rem, 10vh);
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45ch, 1fr));
+    gap: clamp(1.5rem, 6vmax, 3rem);
+
+    .col {
+      &--image {
+        @media #{$breakpoint-small} {
+          order: -1;
+        }
+      }
+
+      &--copy {
+        max-width: 45ch;
+      }
+    }
+  }
+}
 
 
 

@@ -184,15 +184,14 @@ p {
 
 
 div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
+  margin: 100px;
   float: left;
   width: 180px;
+  
+  
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
+
 
 div.gallery img {
   width: 100%;
@@ -203,7 +202,6 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
-
 
 
 
@@ -249,8 +247,3 @@ input[type=submit] {
   
 }
 
-.gallery{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

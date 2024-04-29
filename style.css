@@ -13,6 +13,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0rem calc((100vw - 1300px) / 2);
+  padding-inline: 5% 10%;
 }
 
 
@@ -39,7 +40,8 @@ nav a:hover {
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  @media (max-width: 600px)
   height: 95vh;
   padding: 3rem calc((100vw - 1300px) / 2);
   text-align: center;
